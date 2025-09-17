@@ -54,24 +54,148 @@ type Hand = {
     fingers?:Finger[]
 }
 type Leg = {
-    name:string,
-    height:number,
+   height:number,
     size:number,
     fingers:Finger
 };
 
 type Humen = {
     name:string,
-    side:string,
+    side:"left"|"right",
     think?:(about:string) => void,
-    body:string,
+    body?:string,
     hands:{
         left:Hand,
         right:Hand
     },
     legs:{
         left:Leg,
-        right:leg
+        right:Leg
     };
 };
-const humen1:Humen[] = [];
+const humens:Humen[] = [
+    {
+        name: "Marco Reus",
+        side: "right",
+        hands: {
+            left: {
+                fingers: []
+            },
+            right: {
+                fingers: []
+            }
+        },
+        legs: {
+            left: {
+                height: 0,
+                size: 0,
+                fingers: {
+                    name: "",
+                    height: 0,
+                    isHasNail: false
+                }
+            },
+            right: {
+                height: 0,
+                size: 0,
+                fingers: {
+                    name: "",
+                    height: 0,
+                    isHasNail: false
+                }
+            }
+        }
+    },
+    {
+        name: "Ludo Bagman",
+        side: "left",
+        think:function(about:string){
+            console.log(about);
+        },
+        hands: {
+            left: {
+                fingers: []
+            },
+            right: {
+                fingers: []
+            }
+        },
+        legs: {
+            left: {
+                height: 0,
+                size: 0,
+                fingers: {
+                    name: "",
+                    height: 0,
+                    isHasNail: false
+                }
+            },
+            right: {
+                height: 0,
+                size: 0,
+                fingers: {
+                    name: "",
+                    height: 0,
+                    isHasNail: false
+                }
+            }
+        }
+    },
+    {
+        name: "Montenegro",
+        side: "left",
+        body:"PAAN",
+        hands: {
+            left: {
+                fingers: []
+            },
+            right: {
+                fingers: []
+            }
+        },
+        legs: {
+            left: {
+                height: 0,
+                size: 0,
+                fingers: {
+                    name: "",
+                    height: 0,
+                    isHasNail: false
+                }
+            },
+            right: {
+                height: 0,
+                size: 0,
+                fingers: {
+                    name: "",
+                    height: 0,
+                    isHasNail: false
+                }
+            }
+        }
+    }
+];
+const humen:Humen = humens[2];
+
+for (let i = 0; i < humens.length; i++) {
+    const H:Humen = humens[i];
+    // console.log(H);
+    for(let key in H){
+        console.log(key,H[key]);
+    }
+}
+for (let i in humens) {
+    const h:Humen = humens[i];
+    // console.log(h);
+}
+let lside:string = "left";
+
+
+lside = "right";
+
+
+// console.log(humen["legs"][lside]["height"]);
+// humen.legs.right.height
+// for(let j in humen){
+//     console.log (j)
+// }

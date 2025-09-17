@@ -5,6 +5,14 @@ let aaa:string = wWw;
 // }
 // console.log(wWw)
 const arr:number[] = [1,2,3,4,5,6];
+const arrStr:string[] = ["hello","world"];
+console.log(arrStr[0]);
+console.log(arrStr[1]);
+console.log(arrStr[arrStr.length-1]);
+console.log(arr[4]);
+for (let l = 0; l < arrStr.length; l++) {
+    const a:string = arrStr[l];
+}
 // for(let j:number = 2; j < arr.length - 1; j++){
 //     aaa += ` ${arr[j]}`;
 // }
@@ -52,7 +60,7 @@ for(let row:number = 0; row < rows;  row++){
     }
     table[row] = rowTable;
 }
-console.log (table);
+console.log (table[0][1]);
 
 let apDoo:number[] = [];
 for(let i:number = 0; i<10000; i++){
