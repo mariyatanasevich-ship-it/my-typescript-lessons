@@ -199,3 +199,19 @@ lside = "right";
 // for(let j in humen){
 //     console.log (j)
 // }
+for (let j in humens){
+    let hum:Humen = humens[j];
+    console.log(typeof hum);
+    if(typeof hum.think==="function"){
+        // console.log(hum.name)
+        hum.think("apple")
+    }
+}
+// пройтись по всіх обєктах які є в хюменс знайти в хюмені параметр боді і записати в нього ключ від масива за яким зберігається обєкт
+
+for (let k in humens){
+    let muh:Humen = humens[k];
+    if (typeof muh.body==="string"){
+        muh.body=k;
+    }
+}

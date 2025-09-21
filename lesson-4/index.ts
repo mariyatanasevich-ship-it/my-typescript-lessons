@@ -28,3 +28,10 @@ else if(Name2==="lorsum"){
 }
 
 // створити функцію яка приймає стрінг параметр і виконує іф умову і щось повертає
+
+function Lorem(param:string){
+    if(param==="lorem Ipsum"){
+        return true
+    }
+    return false;
+}
